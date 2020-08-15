@@ -67,11 +67,11 @@ public class Q1LinkedList<T> implements LinkedList<T>{
         
     }
     
-    public void modifyNodes(){
+    public void modifyNodes(T modifier){
         ListNode currentNode = head;
         if(currentNode.getData() instanceof Double){
             while(currentNode != null){
-                double temp = (Double)currentNode.getData() + 10.5;
+                double temp = (Double)currentNode.getData() + (double)modifier;
                 currentNode.setData(temp); 
                 currentNode = currentNode.getLink();
             }
